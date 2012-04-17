@@ -1,0 +1,157 @@
+<!DOCTYPE HtMl>
+<html lang="en">
+<head>
+        <meta charset="UTF-8"/>
+        <title>Drag.Move.Collide | Demo</title>
+        <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<style>
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+acronym, applet, article, aside, canvas, details, figure, figcaption, hgroup, 
+big, dialog, embed, meter, output, progress, rp, rt, ruby, s, strike, tt, xmp,
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	font-size: 100%;
+}
+
+article, aside, details, menu, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+b,
+strong {
+/*
+  Makes browsers agree.
+  IE + Opera = font-weight: bold.
+  Gecko + WebKit = font-weight: bolder.
+*/
+  font-weight: bold;
+}
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+/*
+  For IE.
+  http://css-tricks.com/ie-fix-bicubic-scaling-for-images
+*/
+  -ms-interpolation-mode: bicubic;
+}
+
+body {
+    font-size: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+/****************/
+/*** Demo CSS ***/
+/****************/
+
+#main section>div {
+  background: #DDD;
+  height: 260px;
+  position: relative;
+  margin-top: 30px;
+}
+
+#main section {
+	margin-top: 25px;
+}
+
+#drag {
+  background: #78BA91;
+  cursor: move;
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+ 
+.drop {
+  background: #6B7B95;
+  float: left;
+  height: 60px;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 72px;
+}
+</style>
+</head>
+<body>
+<section id="main" role="main">
+    <section id="collision">
+        <header>
+            <h1>Drag.Move.Collide</h1>
+        </header>
+        <div>
+            <div id="drag"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+            <div class="drop"></div>
+        </div>
+    </section>
+</section>
+<script src="assets/js/mootools-core-1.4.5-full-nocompat-yc.js"></script>
+<script src="assets/js/mootools-more-1.4.0.1.js"></script>
+<script src="assets/js/elCollide.js"></script>
+<script src="../Source/Drag.Move.Collide.js"></script>
+<script>
+window.addEvent('domready', function(){
+
+    new Drag.Move.Collide(document.id('drag'), {
+
+        container: $$('#collision>div')[0],
+
+        droppables: $$('#collision .drop'),
+
+        onCollide: function(element, droppable){
+            droppable.setStyle('background', '#E79D35');
+        },
+
+        onLeaveCollision: function(element, droppable){
+            droppable.setStyle('background', '#6B7B95');
+        },
+
+        onDrop: function(element, droppable){
+            if (droppable) droppable.setStyle('background', '#C17878');
+        }
+
+    });
+
+});
+</script>
+</body>
+</html>
