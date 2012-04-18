@@ -2,4 +2,6 @@ name: Drag.Move.Collide
 author: jnbdz
 category: Utilities
 tags: [collide, collision, detect, element, drag, drag.move]
+demo: http://jsfiddle.net/jnbdz/3Mfn6/
+docs: https://github.com/jnbdz/Drag.Move.Collide/blob/master/Docs/Drag.Move.Collide.md
 current: 0.1

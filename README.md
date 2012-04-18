@@ -1,7 +1,7 @@
-elCollide
+Drag.Move.Collide
 ===========
 
-The Drag.Move.Collide class makes it easy to detect when two or more elements collide when dragging an another element.
+The Drag.Move.Collide class makes it easy to detect when two or more elements collide when dragging another element.
 
 ![Screenshot](https://github.com/jnbdz/Drag.Move.Collide/raw/master/drag.move.collide.png)
 

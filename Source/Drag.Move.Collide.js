@@ -1,6 +1,6 @@
 /*
 ---
-description: The Drag.Move.Collide class makes it easy to detect when two or more elements collide when dragging an another element.
+description: The Drag.Move.Collide class makes it easy to detect when two or more elements collide when dragging another element.
 
 authors:
   - Jean-Nicolas Boulay (http://jean-nicolas.com/)
