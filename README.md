@@ -8,7 +8,7 @@ The Drag.Move.Collide class makes it easy to detect when two or more elements co
 How to use
 ----------
 
-Similar to Drag.Move. Drag.Move.Collide needs all the same informations.
+Similar to Drag.Move, Drag.Move.Collide needs all of the same informations.
 
         new Drag.Move.Collide(document.id('drag'), {
 
