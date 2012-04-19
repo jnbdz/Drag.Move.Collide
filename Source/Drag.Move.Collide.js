@@ -12,7 +12,7 @@ requires:
  - core/1.4:   '*'
  - more:1.4.0.1/Drag
  - more:1.4.0.1/Drag.Move
- - elCollide/0.1
+ - Element.collide/0.4
 
 provides:
   - Drag.Move.Collide
@@ -44,7 +44,7 @@ Drag.Move.Collide = new Class({
 
 			var overed = this.droppables.filter(function(el, i){
 
-				return el.elCollide(this.element);
+				return el.collide(this.element);
 
 			}, this);
 
