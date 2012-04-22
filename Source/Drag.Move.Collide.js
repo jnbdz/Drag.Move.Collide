@@ -12,7 +12,7 @@ requires:
  - core/1.4:   '*'
  - more:1.4.0.1/Drag
  - more:1.4.0.1/Drag.Move
- - Element.collide/0.4
+ - Element.collide/0.5
 
 provides:
   - Drag.Move.Collide
